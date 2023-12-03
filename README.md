@@ -50,53 +50,54 @@ mpiprimecyclic.cpp
 
    
 
-		file name                                           				   result 
-		---------                                                    ---------- 
+		file name                                            result 
+		---------                                           ---------- 
 		
-		prime.cpp                                               Sequential code:
-													                                  Prime numbers up to 32:
-													                                  2 3 5 7 11 13 17 19 23 29 31 
+		prime.cpp                                           Sequential code:
+						                    Prime numbers up to 32:
+		                                                    2 3 5 7 11 13 17 19 23 29 31 
 		
 		
-		primenum.cpp                                            Parallel code:
-                      																		  Process 0: 3 5 7 9 11 
-                      																		  Parallel code:
-                      																	    Process 1: 13 15 17 19 21 
-                      																      Parallel code:
-                      																		  Process 2: 23 25 27 29 31 
+		primenum.cpp                                        Parallel code:
+								    Process 0: 3 5 7 9 11 
+								    Parallel code:
+								    Process 1: 13 15 17 19 21 
+								    Parallel code:
+								    Process 2: 23 25 27 29 31 
 
-                        																	  Sequential code:
-                        																	  Prime numbers up to 32:
-                        																	  2 3 5 7 11 13 17 19 23 29 31 
+								    Sequential code:
+								    Prime numbers up to 32:
+								    2 3 5 7 11 13 17 19 23 29 31 
 																	    
 		
-		mpiprime.cpp                                            Parallel code:
-                        																		Process 2: 23 29 31 
-                        																		Parallel code:
-                        																		Process 0: 2 3 5 7 11 
-                        																		Parallel code:
-                        																		Process 1: 13 17 19 
-                        																		Process 0: Elapsed time (seconds) using GetWallTime = 0.000207186
-                        																		Elapsed time(seconds) using MPI_Wtime = 0.000234857
-                        																		Process 1: Elapsed time (seconds) using GetWallTime = 0.000200987
-                        																		Process 2: Elapsed time (seconds) using GetWallTime = 0.000259876
+		mpiprime.cpp                                        Parallel code:
+								    Process 2: 23 29 31 
+								    Parallel code:
+								    Process 0: 2 3 5 7 11 
+								    Parallel code:
+								    Process 1: 13 17 19 
+								    Process 0: Elapsed time (seconds) using GetWallTime = 0.000207186
+							            Elapsed time(seconds) using MPI_Wtime = 0.000234857
+								    Process 1: Elapsed time (seconds) using GetWallTime = 0.000200987
+								    Process 2: Elapsed time (seconds) using GetWallTime = 0.000259876
 
 
-    mpiruncyclic.cpp 				                        				Parallel code:
-                        																		Process 0: 3 9 15 21 27 
-                        																		Parallel code:
-                        																		Process 1: 5 11 17 23 29 
-                        																		Parallel code:
-                        																		Process 2: 7 13 19 25 31 
+		mpiruncyclic.cpp 				    Parallel code:
+								    Process 0: 3 9 15 21 27 
+								    Parallel code:
+								    Process 1: 5 11 17 23 29 
+								    Parallel code:
+								    Process 2: 7 13 19 25 31 
 
 		
-		mpiprimecyclic.cpp            							        		Process 2: 7 13 19 31 
-                        																		Process 0: 3 
-                        																		Process 1: 5 11 17 23 29 
-                        																		Process 1: Elapsed time (seconds) using GetWallTime = 0.000236988
-                        																		Process 2: Elapsed time (seconds) using GetWallTime = 0.000226974
-                        																		Process 0: Elapsed time (seconds) using GetWallTime = 0.000181913
-                        																		Elapsed time (seconds) using MPI_Wtime = 0.000227558
+		mpiprimecyclic.cpp            			    Process 2: 7 13 19 31 
+								    Process 0: 3 
+								    Process 1: 5 11 17 23 29 
+								    Process 1: Elapsed time (seconds) using GetWallTime = 0.000236988
+								    Process 2: Elapsed time (seconds) using GetWallTime = 0.000226974
+								    Process 0: Elapsed time (seconds) using GetWallTime = 0.000181913
+								    Elapsed time (seconds) using MPI_Wtime = 0.000227558
+
 
 -----------------------------------------------------------
 q2: Why the algorithms checks only up to sqrt(n) not up to N?
